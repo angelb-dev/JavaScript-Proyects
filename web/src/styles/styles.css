@@ -1,0 +1,192 @@
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 4rem;
+  }
+}
+
+.project-card {
+  position: relative;
+  color: black;
+  border-radius: 0.5rem;
+}
+
+.project-link {
+  display: block;
+  transition: transform 0.2s;
+}
+
+.project-link:hover {
+  transform: scale(1.1);
+}
+
+.project-number {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  transform: rotate(-12deg);
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: all 0.3s;
+  color: #03a194;
+}
+
+.project-link:hover .project-number {
+  transform: scale(2) rotate(-12deg);
+  top: 1rem;
+  left: 1.5rem;
+  opacity: 1;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.project-content {
+  padding: 0.00rem  1.25rem  1.25rem  1.25rem;
+}
+
+.project-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: #f1f5f9;
+}
+
+.project-title a {
+  transition: color 0.2s;
+}
+
+.project-title a:hover {
+  color: #3a96d3;
+}
+
+.project-description {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  color: white;
+}
+
+.project-learnings {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.learning-item {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #4b5563;
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s;
+  border-width: 1px;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .project-link {
+    font-size: 0.875rem;
+  }
+}
+
+.code-link {
+  color: rgb(218, 215, 215);
+  background-color: rgb(37, 36, 36);
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.code-link:hover {
+  background-color: rgba(255, 255, 255, 0.233);
+}
+
+.demo-link {
+  color: #0369a1;
+  background-color: rgba(79, 114, 133, 0.2);
+  border-color: rgba(3, 105, 161, 0.6);
+}
+
+.demo-link:hover {
+  background-color: rgba(0, 213, 255, 0.2);
+}
+
+.github-link {
+  color: rgb(221, 212, 108);
+  background-color: #222;
+  border-color: rgba(185, 28, 28, 0.6);
+}
+
+.github-link:hover {
+  background-color: rgba(185, 174, 28, 0.2);
+}
+
+.link-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.25rem;
+}
+
+.next-project {
+  min-height: 15rem;
+  position: relative;
+  color: black;
+  border-radius: 0.5rem;
+  background-color: #808091;
+}
+
+.next-project-link {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  font-weight: 600;
+  color: #3a3a3a;
+  text-align: center;
+  font-size: 1.25rem;
+  transition: transform 0.2s;
+}
+
+.next-project-link:hover {
+  transform: scale(1.2);
+}

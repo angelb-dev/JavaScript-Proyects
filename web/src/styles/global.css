@@ -1,0 +1,142 @@
+/* Estilos específicos para este componente */
+body {
+  background: #111;
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    gap: 3rem;
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+  }
+  
+  .about-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  
+  .about-content {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.125rem;
+    text-wrap: pretty;
+    order: 2;
+    line-height: 1.5;
+  }
+  
+  .about-content p {
+    margin-bottom: 1rem;
+    color: white
+  }
+  
+  .about-content strong {
+    color: black;
+    background-color: #fde047;
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 0.125rem 0.25rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    background-color: #222;
+    transition: all 0.2s ease;
+    border-width: 1px;
+    border-radius: 0.5rem;
+  }
+  
+  .social-link:hover {
+    background-color: #9089a0;
+  }
+  
+  .social-link svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .profile-image {
+    width: 13rem;
+    height: auto;
+    object-fit: cover;
+    padding: 0.25rem;
+    background-color: white;
+    order: 1;
+    transform: rotate(3deg);
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+  }
+  
+  /* Media queries */
+  @media (min-width: 768px) {
+    .about-article {
+      flex-direction: row;
+    }
+  
+    .about-content {
+      order: 1;
+    }
+  
+    .social-link {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      background-color: #222;
+    }
+  
+    .profile-image {
+      order: 2;
+      padding: 0.5rem;
+    }
+  }
+  
+  /* Estilos específicos para los enlaces */
+  .github-link {
+    border-color: #c4302b;
+  }
+  
+  .twitch-link {
+    border-color: #874af6;
+  }
+  
+  .twitch-link:hover {
+    background-color: #d1b9ff;
+  }
+  
+  /* Estilos para modo oscuro */
+  @media (prefers-color-scheme: dark) {
+    .profile-image {
+      background-color: rgba(234, 179, 8, 0.05);
+    }
+  }
