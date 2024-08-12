@@ -4,7 +4,7 @@ export const PROJECTS = [
     title: "Calculator",
     hidden: false,
     description:
-      "Aprende a crear el efecto de swipe de Tinder con HTML, CSS y JavaScript.",
+      "Desarrolla una calculadora interactiva utilizando HTML, CSS y JavaScript.",
     learnings: [
       "DOM",
       "Eventos de clic",
@@ -17,9 +17,10 @@ export const PROJECTS = [
   {
     slug: "02-contador-de-numero-par",
     title: "Contador de Números Pares",
-    description: "Resolvemos una prueba técnica que te propone crear el Tetris en 40 minutos",
+    description: "Crea un contador interactivo de números pares utilizando JavaScript.",
     learnings: [
-      "Eventos de teclado",
+      "DOM",
+      "Eventos de ratón",
       "Lógica de programación"
     ],
     theme: {
