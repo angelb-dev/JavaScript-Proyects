@@ -9,7 +9,8 @@ export const PROJECTS = [
       "DOM",
       "Events",
       "Eval",
-      "Conditionals"
+      "Conditionals",
+      "Arrays"
     ],
     blog: 'https://angeldev-blog.vercel.app/blog'
   },
