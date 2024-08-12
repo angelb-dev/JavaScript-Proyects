@@ -1,7 +1,7 @@
 export const PROJECTS = [
   {
     slug: "01-calculator",
-    title: "Tinder Swipe",
+    title: "Calculator",
     hidden: false,
     description:
       "Aprende a crear el efecto de swipe de Tinder con HTML, CSS y JavaScript.",
