@@ -14,7 +14,7 @@ export const PROJECTS = [
     blog: 'https://angeldev-blog.vercel.app/blog'
   },
   {
-    slug: "02-tetris-canvas",
+    slug: "02-contador-de-numero-par",
     title: "Tetris en Canvas",
     description: "Resolvemos una prueba técnica que te propone crear el Tetris en 40 minutos",
     learnings: [
