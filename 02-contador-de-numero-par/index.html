@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Números Pares</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #111;
+            font-family: Arial, sans-serif;
+        }
+
+        #number-display {
+            font-size: 14em;
+            color: white;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="number-display">0</div>
+    <script>
+        let currentNumber = 0;
+
+        // Función para actualizar el número en la pantalla
+        function updateDisplay() {
+            document.getElementById('number-display').textContent = currentNumber;
+        }
+
+        // Función para manejar los eventos de clic
+        function handleClick(event) {
+            if (event.button === 0) { // Click izquierdo
+                let nextEvenNumber = currentNumber + 2;
+                currentNumber = nextEvenNumber;
+            } else if (event.button === 2) { // Click derecho
+                let prevEvenNumber = currentNumber - 2;
+                if (prevEvenNumber >= 0) { // Evita números negativos
+                    currentNumber = prevEvenNumber;
+                }
+            }
+            updateDisplay();
+        }
+
+        // Añadir los manejadores de eventos
+        document.addEventListener('contextmenu', event => event.preventDefault()); // Evitar menú de contexto del clic derecho
+        document.addEventListener('mousedown', handleClick);
+
+        // Inicializar la visualización
+        updateDisplay();
+    </script>
+</body>
+</html>
