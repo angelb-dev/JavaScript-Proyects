@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (value === '=') {
                 calculate();
             } else {
-                display.value += value;
+                if (display.value.length < 10) {
+                    display.value += value;
+                }
             }
         });
     });
