@@ -7,10 +7,10 @@ export const PROJECTS = [
       "Aprende a crear el efecto de swipe de Tinder con HTML, CSS y JavaScript.",
     learnings: [
       "DOM",
-      "Events",
-      "Eval",
-      "Conditionals",
-      "Arrays"
+      "Eventos de clic",
+      "Lógica de programación",
+      "Operaciones matemáticas",
+      "Manipulación de strings"
     ],
     blog: 'https://angeldev-blog.vercel.app/blog'
   },
@@ -19,7 +19,6 @@ export const PROJECTS = [
     title: "Contador de Números Pares",
     description: "Resolvemos una prueba técnica que te propone crear el Tetris en 40 minutos",
     learnings: [
-      "Canvas",
       "Eventos de teclado",
       "Lógica de programación"
     ],
