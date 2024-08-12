@@ -7,9 +7,9 @@ export const PROJECTS = [
       "Aprende a crear el efecto de swipe de Tinder con HTML, CSS y JavaScript.",
     learnings: [
       "DOM",
-      "Animaciones con gestos",
-      "Eventos de mouse y touch",
-      "Transiciones CSS",
+      "Event Listeners",
+      "Eval() Function",
+      "Conditional Statements"
     ],
     blog: 'https://angeldev-blog.vercel.app/blog'
   },
