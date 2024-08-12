@@ -11,6 +11,13 @@
     </head>
     <body>
         <main>
+            <label for="next-page">Ir a la siguiente página:</label>
+            <select id="next-page" onchange="location = this.value;">
+                <option value="">Selecciona...</option>
+                <option value="02-calculator/index.html">next-1</option>
+                <option value="03-calculator/index.html">next-2</option>
+                <option value="04-calculator/index.html">next-3</option>
+            </select>
             <article id="appBg">
                 <form name="calculator">
                     <input type="textfield" name="ans" value="" autocomplete="off" readonly>
