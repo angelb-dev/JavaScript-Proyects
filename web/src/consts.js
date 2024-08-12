@@ -1,6 +1,6 @@
 export const PROJECTS = [
   {
-    slug: "01-tinder-swipe",
+    slug: "01-calculator",
     title: "Tinder Swipe",
     hidden: false,
     description:
@@ -28,7 +28,21 @@ export const PROJECTS = [
     blog: "https://angeldev-blog.vercel.app/blog"
   },
   {
-    slug: "03-tetris-canvas",
+    slug: "03-tinder-swipe",
+    title: "Tinder Swipe",
+    hidden: false,
+    description:
+      "Aprende a crear el efecto de swipe de Tinder con HTML, CSS y JavaScript.",
+    learnings: [
+      "DOM",
+      "Animaciones con gestos",
+      "Eventos de mouse y touch",
+      "Transiciones CSS",
+    ],
+    blog: 'https://angeldev-blog.vercel.app/blog'
+  },
+  {
+    slug: "04-tetris-canvas",
     title: "Tetris en Canvas",
     description: "Resolvemos una prueba técnica que te propone crear el Tetris en 40 minutos",
     learnings: [
