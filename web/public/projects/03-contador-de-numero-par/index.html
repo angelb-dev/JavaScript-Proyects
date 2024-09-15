@@ -49,11 +49,9 @@
             updateDisplay();
         }
 
-        // Añadir los manejadores de eventos
-        document.addEventListener('contextmenu', event => event.preventDefault()); // Evitar menú de contexto del clic derecho
+        document.addEventListener('contextmenu', event => event.preventDefault());
         document.addEventListener('mousedown', handleClick);
 
-        // Inicializar la visualización
         updateDisplay();
     </script>
 </body>
