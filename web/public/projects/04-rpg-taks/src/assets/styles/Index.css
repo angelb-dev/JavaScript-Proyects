@@ -1,0 +1,154 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    margin: 0; /* Eliminar el margen predeterminado */
+    padding: 0; /* Eliminar el relleno predeterminado */
+    font-family: Arial, sans-serif; /* Establecer la fuente predeterminada */
+}
+
+/* Estilos para el encabezado de la página */
+header {
+    background-color: #333; /* Establecer el color de fondo */
+    color: #fff; /* Establecer el color del texto */
+    padding: 15px; /* Agregar relleno alrededor del contenido */
+    text-align: left; /* Alinear el texto a la izquierda */
+    position: fixed; /* Fijar el encabezado en la parte superior de la página */
+    top: 0; /* Establecer la posición en la parte superior de la página */
+    left: 0; /* Establecer la posición en el borde izquierdo de la página */
+    width: 100%; /* Establecer el ancho del encabezado */
+    z-index: 100; /* Establecer la prioridad del encabezado sobre otros elementos */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #555; /* Establecer el color de fondo de la barra de navegación */
+    color: #fff; /* Establecer el color del texto */
+    padding: 10px; /* Agregar relleno alrededor del contenido */
+    text-align: left; /* Alinear el texto a la izquierda */
+    width: 200px; /* Establecer el ancho de la barra de navegación */
+    position: fixed; /* Fijar la posición de la barra de navegación */
+    left: 0; /* Establecer el margen izquierdo de la barra de navegación */
+    top: 111px; /* Establecer el margen superior de la barra de navegación */
+    bottom: 0; /* Establecer el margen inferior de la barra de navegación */
+    overflow-y: auto; /* Permitir el desplazamiento vertical en la barra de navegación */
+    z-index: 1000; /* Establecer un valor de índice de capa para la barra de navegación */
+    }
+
+/* Estilos para la lista de enlaces en la barra de navegación */
+nav ul {
+    list-style-type: none; /* Eliminar los marcadores de lista */
+    padding: 0; /* Eliminar el relleno predeterminado */
+    margin: 0; /* Eliminar el margen predeterminado */
+}
+
+/* Estilos para los elementos de la lista en la barra de navegación */
+nav ul li {
+    margin-bottom: 10px; /* Agregar margen inferior a cada elemento de la lista */
+}
+
+/* Estilos para los enlaces en la barra de navegación */
+nav a {
+    color: #fff; /* Establecer el color del texto */
+    text-decoration: none; /* Eliminar el subrayado predeterminado */
+    padding: 5px; /* Agregar relleno alrededor del texto */
+    display: block; /* Establecer el ancho del enlace para que ocupe todo el espacio disponible */
+    font-size: 18px; /* Aumentar el tamaño de la letra */
+}
+
+/* Estilos para los enlaces en la barra de navegación al pasar el cursor sobre ellos */
+nav a:hover {
+    background-color: #777; /* Establecer el color de fondo al pasar el cursor */
+}
+
+/* Estilos para el contenedor principal de la página */
+.container {
+    display: flex; /* Establecer el diseño flexible */
+    justify-content: space-between; /* Alinear los elementos en el eje horizontal */
+    align-items: flex-start; /* Alinear los elementos en el eje vertical */
+    width: 80%; /* Establecer el ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    margin-top: 120px; /* Agregar margen superior */
+}
+
+/* Estilos para los elementos del contenedor principal */
+.task-creator,
+.task-list,
+.element-list {
+    width: 30%; /* Establecer el ancho de cada elemento */
+    border: 1px solid #ccc; /* Agregar un borde */
+    border-radius: 5px; /* Agregar bordes redondeados */
+    padding: 15px; /* Agregar relleno alrededor del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    margin-left: 150px; /* Ajustar posición de las cajas */
+}
+
+/* Estilos para los elementos del contenedor principal que están a la derecha */
+.task-list,
+.element-list {
+    margin-left: 20px; /* Agregar margen izquierdo */
+}
+
+/* Estilos para las listas sin orden */
+ul {
+    list-style-type: none; /* Eliminar los marcadores de lista */
+    padding: 0; /* Eliminar el relleno predeterminado */
+}
+
+/* Estilos para los elementos de las listas sin orden */
+li {
+    padding: 10px 0; /* Agregar relleno alrededor del contenido */
+    border-bottom: 1px solid #ddd; /* Agregar un borde inferior */
+    display: flex; /* Establecer el diseño flexible */
+    justify-content: space-between; /* Alinear los elementos en el eje horizontal */
+    align-items: center; /* Alinear los elementos en el eje vertical */
+    position: relative; /* Establecer la posición relativa */
+}
+
+/* Estilos para la información de las tareas y los elementos */
+.task-info,
+.element-info {
+    flex-grow: 1; /* Permitir que el contenido crezca para ocupar todo el espacio disponible */
+}
+
+/* Estilos para el campo de entrada de experiencia de las tareas */
+.task-exp-input {
+    margin-left: 10px; /* Agregar margen izquierdo */
+    width: 50px; /* Establecer el ancho del campo de entrada */
+}
+
+/* Estilos para la experiencia de las tareas y los elementos */
+.task-exp,
+.element-exp {
+    color: blue; /* Establecer el color del texto */
+    margin-left: 10px; /* Agregar margen izquierdo */
+}
+
+/* Estilos para el botón de eliminación */
+.delete-button {
+    cursor: pointer; /* Establecer el cursor como puntero al pasar el cursor sobre el botón */
+    color: transparent; /* Ocultar el texto del botón */
+    transition: color 0.3s ease; /* Establecer una transición para el cambio de color */
+}
+
+/* Estilos para el botón de eliminación al pasar el cursor sobre él */
+li:hover.delete-button {
+    color: red; /* Establecer el color del texto al pasar el cursor */
+}
+
+/* Estilos para el campo de entrada de chat */
+.chat-input {
+    width: calc(100% - 30px); /* Reducir el ancho del campo de entrada para compensar el relleno */
+    margin-top: 10px; /* Agregar margen superior */
+    padding: 5px; /* Agregar relleno alrededor del contenido */
+    border: 1px solid #ccc; /* Agregar un borde */
+    border-radius: 5px; /* Agregar bordes redondeados */
+}

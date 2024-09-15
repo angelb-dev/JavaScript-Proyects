@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-family: Arial, sans-serif;
+}
+
+.day-info {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0 20px;
+}

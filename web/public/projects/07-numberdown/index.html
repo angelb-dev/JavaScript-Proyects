@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Números Cayendo</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        #game-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #87CEEB;
+            position: relative;
+        }
+        .number {
+            position: absolute;
+            font-size: 24px;
+            cursor: grab;
+            touch-action: none;
+        }
+        #bucket {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 80px;
+            background-color: #8B4513;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: white;
+        }
+        #score {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #menu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="bucket">#</div>
+        <div id="score">Puntuación: 0</div>
+        <div id="menu">Click para empezar</div>
+    </div>
+
+    <script>
+        const gameContainer = document.getElementById('game-container');
+        const bucket = document.getElementById('bucket');
+        const scoreElement = document.getElementById('score');
+        const menu = document.getElementById('menu');
+        let score = 0;
+        let draggedNumber = null;
+        let gameInterval;
+        let gameRunning = false;
+
+        function startGame() {
+            menu.style.display = 'none';
+            gameRunning = true;
+            gameInterval = setInterval(createNumber, 2000);
+        }
+
+        menu.addEventListener('click', startGame);
+
+        function createNumber() {
+            const number = document.createElement('div');
+            number.className = 'number';
+            number.textContent = Math.floor(Math.random() * 10);
+            number.style.left = `${Math.random() * (gameContainer.clientWidth - 30)}px`;
+            number.style.top = '-30px';
+            gameContainer.appendChild(number);
+
+            let falling = setInterval(() => {
+                if (!gameRunning || number.isDragging) {
+                    return;
+                }
+                const top = parseInt(number.style.top);
+                if (top < gameContainer.clientHeight) {
+                    number.style.top = `${top + 2}px`;
+                } else {
+                    clearInterval(falling);
+                    if (gameContainer.contains(number)) {
+                        score -= parseInt(number.textContent);
+                        updateScore();
+                        gameContainer.removeChild(number);
+                    }
+                }
+            }, 50);
+
+            number.addEventListener('mousedown', startDragging);
+            number.addEventListener('touchstart', startDragging, { passive: false });
+        }
+
+        function startDragging(e) {
+            if (e.type === 'touchstart') {
+                e.preventDefault();
+            }
+            draggedNumber = e.target;
+            draggedNumber.isDragging = true;
+            draggedNumber.style.cursor = 'grabbing';
+
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('touchmove', drag, { passive: false });
+            document.addEventListener('mouseup', stopDragging);
+            document.addEventListener('touchend', stopDragging);
+        }
+
+        function drag(e) {
+            if (draggedNumber) {
+                e.preventDefault();
+                const clientX = e.clientX || e.touches[0].clientX;
+                const clientY = e.clientY || e.touches[0].clientY;
+                draggedNumber.style.left = `${clientX - 15}px`;
+                draggedNumber.style.top = `${clientY - 15}px`;
+                checkCollision();
+            }
+        }
+
+        function stopDragging() {
+            if (draggedNumber) {
+                draggedNumber.isDragging = false;
+                draggedNumber.style.cursor = 'grab';
+                draggedNumber = null;
+            }
+            document.removeEventListener('mousemove', drag);
+            document.removeEventListener('touchmove', drag);
+            document.removeEventListener('mouseup', stopDragging);
+            document.removeEventListener('touchend', stopDragging);
+        }
+
+        function checkCollision() {
+            if (draggedNumber) {
+                const numberRect = draggedNumber.getBoundingClientRect();
+                const bucketRect = bucket.getBoundingClientRect();
+
+                if (
+                    numberRect.left < bucketRect.right &&
+                    numberRect.right > bucketRect.left &&
+                    numberRect.top < bucketRect.bottom &&
+                    numberRect.bottom > bucketRect.top
+                ) {
+                    score += parseInt(draggedNumber.textContent);
+                    updateScore();
+                    if (gameContainer.contains(draggedNumber)) {
+                        gameContainer.removeChild(draggedNumber);
+                    }
+                    draggedNumber = null;
+                }
+            }
+        }
+
+        function updateScore() {
+            scoreElement.textContent = `Puntuación: ${score}`;
+        }
+    </script>
+</body>
+</html>

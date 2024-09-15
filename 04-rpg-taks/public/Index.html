@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Tasks | ZeroTF80</title>
+    <link rel="stylesheet" href="../src/assets/styles/Index.css">
+</head>
+<body>
+    <header>
+        <h1>RPG Tasks | ZeroTF80</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Characters</a></li>
+            <li><a href="#">Vacio</a></li>
+            <li><a href="#">Vacio</a></li>
+            <li><a href="#">Vacio</a></li>
+            <li><a href="#">Vacio</a></li>
+            <li><a href="#">Vacio</a></li>
+            <li><a href="#">Vacio</a></li>
+            <li><a href="#">Vacio</a></li>
+            <li><a href="#">Vacio</a></li>
+            <li><a href="#">Vacio</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="task-creator">
+            <h2>Creador de Tareas</h2>
+            <input type="text" id="taskInput" placeholder="Escribe una tarea">
+            <input type="number" id="expInput" class="task-exp-input" placeholder="Exp">
+            <select id="skillInput"></select>
+            <button onclick="addTask()">Agregar Tarea</button>
+        </div>
+        <div class="task-list">
+            <h2>Tareas Realizadas</h2>
+            <ul id="taskList"></ul>
+        </div>
+        <div class="element-list">
+            <h2>Habilidades</h2>
+            <input type="text" id="addSkillInput" placeholder="Añadir habilidad">
+            <button onclick="addSkill()">Añadir</button>
+            <ul id="elementList"></ul>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 RPG Tasks | ZeroTF80</p>
+    </footer>
+    <script src="../src/Index.js"></script>
+</body>
+</html>

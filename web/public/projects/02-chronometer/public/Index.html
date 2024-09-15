@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronometer</title>
+  <link rel="stylesheet" href="../src/assets/styles/Index.css">
+</head>
+<header>
+  <h1> Chronometer | ZeroTF80 </h1>
+</header>
+<body>
+  <div class="timer-container">
+    <div class="timer-display" id="timer">01:00</div>
+    <div class="timer-buttons">
+      <button id="start" class="btn">Start</button>
+      <button id="stop" class="btn">Stop</button>
+      <button id="reset" class="btn">Reset</button>
+      <button id="edit" class="btn">Edit</button>
+    </div>
+  </div>
+  <div class="edit-container" id="edit-container">
+    <div class="edit-header">
+      <h2>Edit Timer</h2>
+      <button id="edit-cancel" class="btn">Cancel</button>
+    </div>
+    <div class="edit-form">
+      <div class="form-group">
+        <label for="edit-hours">Hours:</label>
+        <input type="number" id="edit-hours" value="0">
+      </div>
+      <div class="form-group">
+        <label for="edit-minutes">Minutes:</label>
+        <input type="number" id="edit-minutes" value="0">
+      </div>
+      <div class="form-group">
+        <label for="edit-seconds">Seconds:</label>
+        <input type="number" id="edit-seconds" value="0">
+      </div>
+      <div class="form-group">
+        <label for="edit-increment">Increment:</label>
+        <input type="number" id="edit-increment" value="1">
+      </div>
+      <div class="form-group">
+        <label for="edit-sound">Sound:</label>
+        <select id="edit-sound">
+          <option value="none">None</option>
+          <option value="xylophone">Xylophone</option>
+          <option value="title">Title</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="edit-repeat">Repeat:</label>
+        <input type="checkbox" id="edit-repeat" value="repeat">
+      </div>
+      <div class="form-group">
+        <label for="edit-message">Message:</label>
+        <textarea id="edit-message" rows="4" cols="50"></textarea>
+      </div>
+    </div>
+    <div class="edit-footer">
+      <button id="edit-save" class="btn">Save</button>
+    </div>
+  </div>
+  <script src="../src/Index.js"></script>
+</body>
+<footer>
+  <p>© 2024 RPG Tasks | ZeroTF80</p>
+</footer>
+</html>
