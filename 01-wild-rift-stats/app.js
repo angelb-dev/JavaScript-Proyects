@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { nombre: "Ziggs (No Rework)", picks: 0, bans: 1, victorias: 0, derrotas: 0, kda: 0, tiempoPromedio: 10, farmeoPorMinuto: 2, danioPorMinuto: 0, aguantePorMinuto: 0, diferenciaDeFarming: 0 },
     { nombre: "Orn", picks: 1, bans: 4, victorias: 0, derrotas: 0, kda: 0, tiempoPromedio: 1, farmeoPorMinuto: 0, danioPorMinuto: 10, aguantePorMinuto: 0, diferenciaDeFarming: 0 },
   ];
-
+  
+  document.title = "Estadísticas de Campeones";
   const app = document.createElement('div');
   app.id = 'app';
   app.innerHTML = `
