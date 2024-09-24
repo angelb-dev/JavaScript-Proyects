@@ -71,7 +71,7 @@ export const PROJECTS = [
     blog: 'https://angeldev-blog.vercel.app/blog'
   },
   {
-    slug: '06-tinder-swiper',
+    slug: '06-tinder-swipe',
     title: 'Tinder Swiper',
     description: 'Resolvemos una prueba técnica que te propone crear el Tetris en 40 minutos',
     learnings: [
