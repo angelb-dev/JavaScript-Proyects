@@ -16,16 +16,16 @@ export const PROJECTS = [
   },
   {
     slug: '02-chronometer',
-    title: 'Chonometer',
-    description: 'Crea un contador interactivo de números pares utilizando JavaScript.',
+    title: 'Chronometer',
+    hidden: false,
+    description:
+      'Aprende a crear el efecto de swipe de Tinder con HTML, CSS y JavaScript.',
     learnings: [
       'DOM',
-      'Eventos de ratón',
-      'Lógica de programación'
+      'Animaciones con gestos',
+      'Eventos de mouse y touch',
+      'Transiciones CSS'
     ],
-    theme: {
-      isDark: true
-    },
     blog: 'https://angeldev-blog.vercel.app/blog'
   },
   {
